@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-20T17:26:07+09:00</updated><id>http://localhost:4000/</id><title type="html">awesome jjunghub</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Jekyll이랑 친해지기</title><link href="http://localhost:4000/jekyll/update/2018/03/05/Jekyll-Practice.html" rel="alternate" type="text/html" title="Jekyll이랑 친해지기" /><published>2018-03-05T15:41:00+09:00</published><updated>2018-03-05T15:41:00+09:00</updated><id>http://localhost:4000/jekyll/update/2018/03/05/Jekyll-Practice</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/05/Jekyll-Practice.html">&lt;blockquote&gt;
+  &lt;p&gt;Jekyll 의 핵심 역할은 텍스트 변환 엔진입니다. 시스템 배경 컨셉은 이렇습니다: Markdown 이나 Textile 또는 일반 HTML 등 자신이 즐겨 사용하는 마크업 언어로 문서를 작성하면, Jekyll 은 이 문서들을 다양한 레이아웃으로 포장합니다. 당신은 사이트 URL 구성 방식이나 데이터가 레이아웃에 배치되는 방식 등, 변환 과정에 포함된 다양한 동작들을 원하는대로 조정할 수 있습니다. 단지 텍스트 파일을 수정하는 것만으로 이 모든 일들이 가능하며, 그 결과로 정적 웹 사이트가 만들어집니다.&lt;br /&gt;
+Jekyll website&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Jekyll에서 제공되는 유용한 문서, &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/usage/&quot;&gt;한국어&lt;/a&gt; &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;영어&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;기본-사용법&quot;&gt;기본 사용법&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;에 build 시 참고할 환경변수 들을 설정 해놓으면 편함. 자동 재생성(&lt;code class=&quot;highlighter-rouge&quot;&gt;--watch&lt;/code&gt;) 중에 새로 읽어 들이지 않으니 주의하자.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 개발용 서버가 http://localhost:4000/ 에서 구동&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 자동-재생성이 자동으로 활성화됨. 비활성화 하려면 '--no-watch' 를 뒤에 붙임.&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;detach&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 백그라운드에서 돌아감. 종료하려면&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 'ps aux | grep jekyll' 로 PID 검색 후&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 'kill -9 [PID]'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;구조&quot;&gt;구조&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;&lt;em&gt;한마디로 말하면, 당신의 컨텐츠&lt;/em&gt;&lt;/strong&gt; 다. 중요한 것은 파일들의 명명규칙인데, &lt;strong&gt;반드시 다음 형식을 따라야 한다: &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP.&lt;/code&gt;&lt;/strong&gt; 고유주소는 포스트 별로 각각 정의할 수 있지만, 날짜와 마크업 언어 종류는 오로지 파일명에 의해 결정된다.  예를 들어, 이 포스트의 파일명은 &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-03-05-Jekyll-Practice.markdown&lt;/code&gt; 이다!&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_data&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;&lt;em&gt;사이트에 사용할 데이터&lt;/em&gt;&lt;/strong&gt; 를 적절한 포맷으로 정리하여 보관하는 디렉토리. Jekyll 엔진은 이 디렉토리에 있는 (확장자와 포맷이 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yml&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.json&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt; 인) 모든 YAML 파일을 자동으로 읽어들여 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.data&lt;/code&gt; 로 사용할 수 있도록 만든다. 만약 이 디렉토리에 &lt;code class=&quot;highlighter-rouge&quot;&gt;members.yml&lt;/code&gt; 라는 파일이 있다면, &lt;code class=&quot;highlighter-rouge&quot;&gt;site.data.members&lt;/code&gt; 라고 입력하여 그 컨텐츠를 사용할 수 있다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  
+    &lt;li&gt;
+      &lt;a href=&quot;/jekyll/update/2018/03/05/Jekyll-Practice.html&quot;&gt;Jekyll이랑 친해지기&lt;/a&gt;
+      &lt;blockquote&gt;
+  &lt;p&gt;Jekyll 의 핵심 역할은 텍스트 변환 엔진입니다. 시스템 배경 컨셉은 이렇습니다: Markdown 이나 Textile 또는 일반 HTML 등 자신이 즐겨 사용하는 마크업 언어로 문서를 작성하면, Jekyll 은 이 문서들을 다양한 레이아웃으로 포장합니다. 당신은 사이트 URL 구성 방식이나 데이터가 레이아웃에 배치되는 방식 등, 변환 과정에 포함된 다양한 동작들을 원하는대로 조정할 수 있습니다. 단지 텍스트 파일을 수정하는 것만으로 이 모든 일들이 가능하며, 그 결과로 정적 웹 사이트가 만들어집니다.&lt;br /&gt;
+Jekyll website&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+    &lt;/li&gt;
+  
+    &lt;li&gt;
+      &lt;a href=&quot;/jekyll/update/2018/03/05/welcome-to-jekyll.html&quot;&gt;Welcome to Jekyll!&lt;/a&gt;
+      &lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+
+    &lt;/li&gt;
+  
+&lt;/ul&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Jekyll 의 핵심 역할은 텍스트 변환 엔진입니다. 시스템 배경 컨셉은 이렇습니다: Markdown 이나 Textile 또는 일반 HTML 등 자신이 즐겨 사용하는 마크업 언어로 문서를 작성하면, Jekyll 은 이 문서들을 다양한 레이아웃으로 포장합니다. 당신은 사이트 URL 구성 방식이나 데이터가 레이아웃에 배치되는 방식 등, 변환 과정에 포함된 다양한 동작들을 원하는대로 조정할 수 있습니다. 단지 텍스트 파일을 수정하는 것만으로 이 모든 일들이 가능하며, 그 결과로 정적 웹 사이트가 만들어집니다. Jekyll website</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/03/05/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-03-05T14:54:16+09:00</published><updated>2018-03-05T14:54:16+09:00</updated><id>http://localhost:4000/jekyll/update/2018/03/05/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/05/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
